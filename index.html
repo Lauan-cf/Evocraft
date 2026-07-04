@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,22 +29,95 @@
         {
             height: 460px;
             width: 460px;
+            animation: animarLuzes 3s ease-in-out infinite;
         }
         h1
         {
             text-align: center;
             font-size: 4em;
             margin-top: 100px;
-            -webkit-text-stroke: rgb(88, 6, 88);
-            -webkit-text-stroke-width: 5px;
+           
             color: green;
+
+        }
+        @keyframes animarContorno
+        {
+            0%
+            {
+                -webkit-text-stroke: 2px rgb(255, 0, 0);
+                color: rgb(0, 255, 85);
+            }
+            50%
+            {
+                -webkit-text-stroke: 2px rgb(0, 255, 85);
+                color: red;
+            }
+            75%
+            {
+                -webkit-text-stroke: 2px rgb(17, 0, 255);
+                color: rgb(217, 255, 0);
+            }
+            100%
+            {
+                -webkit-text-stroke: 2px rgb(255, 0, 0);
+                color: rgb(0, 255, 85);
+            }
+            
+        }
+        @keyframes animarLuzes
+        {
+            0%
+            {
+                background: radial-gradient(circle, #ffffff 0%, #ff00aa 60%);
+                box-shadow: 
+                0 0 25px 5px #ff00aa,
+                0 0 60px 25px #ff00aa,
+                0 0 200px 100px rgba(255, 0, 170, 0.8);
+                -webkit-text-stroke: 2px #ff00aa;
+            }
+            25%
+            {
+                background: radial-gradient(circle, #ffffff 0%, #9d00ff 60%);
+                box-shadow: 0 0 25px 5px #9d00ff, 0 0 60px 25px #9d00ff, 0 0 200px 100px #9d00ffcc;
+                -webkit-text-stroke: 2px #9d00ff;
+            }
+            50%
+            {
+                background: radial-gradient(circle, #ffffff 0%, #ff1a40 60%);
+                box-shadow: 0 0 25px 5px #ff1a40,  
+                0 0 60px 25px #ff003c,      
+                0 0 200px 100px #ff003ccc;
+                -webkit-text-stroke: 2px #ff1a40;
+            }
+            75%
+            {
+                background: radial-gradient(circle, #ffffff 0%, #ffea00 60%);
+                box-shadow: 0 0 25px 5px #ffea00, 0 0 60px 25px #ffea00, 0 0 200px 100px rgba(255, 234, 0, 0.8);
+                -webkit-text-stroke: 2px #ffea00;
+            }
+            100%
+            {
+                background: radial-gradient(circle, #ffffff 0%, #ff00aa 60%);
+                box-shadow: 
+                0 0 25px 5px #ff00aa,
+                0 0 60px 25px #ff00aa,
+                0 0 200px 100px rgba(255, 0, 170, 0.8);
+                -webkit-text-stroke: 2px #ff00aa;
+            }
+        }
+        .rosa, .vermelho, .roxo, .amarelo
+        {
+            animation: animarLuzes 3s ease-in-out infinite; 
         }
         .requisito a:hover + .re h1,
         .requisito a:hover + .re p,
         .requisito a:hover + .re ul 
         {
-            color: rgb(9, 255, 0);
+            color: rgb(255, 187, 0);
             transition: 0.8s ease;
+            -webkit-text-stroke: 1px rgb(87, 0, 87);
+            animation: animarLuzes 3s ease-in-out infinite;
+            transition: animation 1s ease;
         }
         
     </style>
