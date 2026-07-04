@@ -76,21 +76,29 @@ p, ul, h1
 }
 
 img:hover
-    {
-        height: 260px;
-        width: 260px;
-        
-        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.349);
-        
-    }
-.re
 {
-    box-sizing: border-box;
-    transition: opacity 0.4s ease;
+    height: 260px;
+    width: 260px;
+    transition: 0.2s;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.349);
 }
-.re:hover
+a:active
 {
-    opacity: 1;
+    transform: scale(0.10);
+}
+
+.requisito a:hover + .re h1,
+.requisito a:hover + .re p,
+.requisito a:hover + .re ul {
     color: gray;
-    transition: opacity 0.4s ease;
+    transition: 0.8s ease;
 }
+
+.requisito a:active + .re h1,
+.requisito a:active + .re p,
+.requisito a:active + .re ul {
+    transform: scale(0.98);
+    transition: transform 0.8s ease;
+}
+
+
